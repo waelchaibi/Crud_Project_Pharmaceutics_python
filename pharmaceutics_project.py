@@ -18,18 +18,15 @@ def AjouterMedicament(Stock):
 def SupprimerMedicament(Stock):
     print('entrez le Id du medicament a supprimer : ')
     while True:
-        #exeption kzz shih yokhrej bel break o ykamel yekhdem
         try:
             Idasupprimer=int(input())
             break
         except:
             print('id invalide ! \n')
     for i in range(len(Stock)-1):
-        #kol input tekhou colone loula donc l id heya el input 3 khthet l colone 3
         if Idasupprimer!=Stock[i][2]:
             print('ce medicament nest pas dans le stock \n')
         else:
-            #pop: ki tati l localisation mtaa eli theb tfaskhou fel liste
             Stock.pop(i)
     print(Stock)
 
@@ -128,8 +125,7 @@ def ModifierFournisseur(Fournisseur):
                 Fournisseur[i][3]=nouvnum
                 x=1
             else:
-                print('Fournisseur introuvable')
-   #khde kol block w badlo be bweh ekher ama b wahda bel wahda              
+                print('Fournisseur introuvable')          
     print(Fournisseur)
 #================================================================
     
